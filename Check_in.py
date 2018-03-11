@@ -30,7 +30,7 @@ import time
 import pandas as pd
 
 #open the file with login info and course name
-info = pd.read_csv('/Users/dominikklepl/Desktop/Check in.csv',sep=';')
+info = pd.read_csv('Check_in.csv',sep=';')
 
 #extract the information from the csv file
 user=info.iloc[0]['Username']
