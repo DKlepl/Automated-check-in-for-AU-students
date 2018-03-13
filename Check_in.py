@@ -76,6 +76,12 @@ time.sleep(2)
 qwickly_button = driver.find_element_by_link_text('Qwickly')
 qwickly_button.click()
 
+time.sleep(2)
+#click on check in
+checkin_button = driver.find_element_by_name("studentCheckIn")
+checkin_button.click()
+
+
 #That's it for now but as after next lecture it will be possible to even click on Check In button
 #or in case of Mel's lecture to enter the password
 
