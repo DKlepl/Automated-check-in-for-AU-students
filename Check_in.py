@@ -40,6 +40,10 @@ password=info.iloc[0]['Password']
 which_course = input("Hello, enjoying lecture? BTW what lecture would that be? \n 0: Social and cultural dynamics in cognition \n 1: Computational Modeling for Cognitive Science \n 2: Models of perception and action \n Your answer: ")
 which_course = int(which_course)
 
+if which_course ==2: #that means we'll need a password
+    code = input("Could you repeat the code Mel just told you? Pretty please.")
+
+
 #depending on which_course choose the correct row in info
 course=info.iloc[which_course]['Course']
 
@@ -77,26 +81,17 @@ qwickly_button = driver.find_element_by_link_text('Qwickly')
 qwickly_button.click()
 
 time.sleep(2)
-#click on check in
+
+
+if which_course ==2: #that means we'll need a password
+ 
+     #find the code input box
+     code_box = driver.find_element_by_name('studentPin')
+     code_box.send_keys(code)
+
+
 checkin_button = driver.find_element_by_name("studentCheckIn")
-checkin_button.click()
-
-
-#That's it for now but as after next lecture it will be possible to even click on Check In button
-#or in case of Mel's lecture to enter the password
-
-#preparation for entering password
-# =============================================================================
-# if which_course ==2: #that means we'll need a password
-#    code = input("Could you repeat the code Mel just told you? Pretty please.")
-#     
-#     #find the code input box
-#     code_box = driver.find_element_by_id('')
-#     code_box.send_keys(code)
-#     
-#     #and click on accept or maybe hit Enter?
-# =============================================================================
-    
+checkin_button.click() 
     
 
 
